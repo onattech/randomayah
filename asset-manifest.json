@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/randomayah/static/css/main.d1b05096.chunk.css",
+    "main.js": "/randomayah/static/js/main.47723138.chunk.js",
+    "main.js.map": "/randomayah/static/js/main.47723138.chunk.js.map",
+    "runtime-main.js": "/randomayah/static/js/runtime-main.1122143d.js",
+    "runtime-main.js.map": "/randomayah/static/js/runtime-main.1122143d.js.map",
+    "static/js/2.95bb23e4.chunk.js": "/randomayah/static/js/2.95bb23e4.chunk.js",
+    "static/js/2.95bb23e4.chunk.js.map": "/randomayah/static/js/2.95bb23e4.chunk.js.map",
+    "index.html": "/randomayah/index.html",
+    "precache-manifest.ac2511d742b9be8f95eda261e53ed908.js": "/randomayah/precache-manifest.ac2511d742b9be8f95eda261e53ed908.js",
+    "service-worker.js": "/randomayah/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/randomayah/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.95bb23e4.chunk.js.LICENSE": "/randomayah/static/js/2.95bb23e4.chunk.js.LICENSE",
+    "static/media/logo.svg": "/randomayah/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1122143d.js",
+    "static/js/2.95bb23e4.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.47723138.chunk.js"
+  ]
+}
