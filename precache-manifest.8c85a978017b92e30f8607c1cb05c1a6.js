@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "986c8b9921f80025454ee8373851eed9",
+    "revision": "4e48fb41ec54656cca21ccea675992c6",
     "url": "/randomayah/index.html"
   },
   {
-    "revision": "89983c976c3a1e5ad8bc",
+    "revision": "02b715aac12a0d1876ec",
     "url": "/randomayah/static/css/main.4b3884d2.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/randomayah/static/js/2.d3cc21b2.chunk.js.LICENSE"
   },
   {
-    "revision": "89983c976c3a1e5ad8bc",
-    "url": "/randomayah/static/js/main.4d2b5970.chunk.js"
+    "revision": "02b715aac12a0d1876ec",
+    "url": "/randomayah/static/js/main.9c65e09e.chunk.js"
   },
   {
     "revision": "06b16dbe5153af7e85f0",
