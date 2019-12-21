@@ -77,6 +77,7 @@ const Quote = props => {
 
   return (
     <div id='quote-box'>
+      <h1 id='title'>مولد آيات عشوائي</h1>
       {props.loading && <p id='loading'>...جار التحميل</p>}
       <p
         style={{ color: props.color, display: props.loading && 'none' }}
@@ -90,7 +91,7 @@ const Quote = props => {
       >
         {props.author}
       </p>
-      <button
+      <button id='button'
         style={{ backgroundColor: props.color }}
         onClick={props.handleClick}
         id='new-quote'
