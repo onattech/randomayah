@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/randomayah/static/css/main.4b3884d2.chunk.css",
+    "main.css": "/randomayah/static/css/main.6aaade59.chunk.css",
     "main.js": "/randomayah/static/js/main.ea07dd69.chunk.js",
     "main.js.map": "/randomayah/static/js/main.ea07dd69.chunk.js.map",
     "runtime-main.js": "/randomayah/static/js/runtime-main.1122143d.js",
@@ -8,16 +8,17 @@
     "static/js/2.39fbd4e2.chunk.js": "/randomayah/static/js/2.39fbd4e2.chunk.js",
     "static/js/2.39fbd4e2.chunk.js.map": "/randomayah/static/js/2.39fbd4e2.chunk.js.map",
     "index.html": "/randomayah/index.html",
-    "precache-manifest.73ef18cb3e6c6f72124da9b02e65c5a3.js": "/randomayah/precache-manifest.73ef18cb3e6c6f72124da9b02e65c5a3.js",
+    "precache-manifest.7f827bb47fdaad4076a09abc2495dd7c.js": "/randomayah/precache-manifest.7f827bb47fdaad4076a09abc2495dd7c.js",
     "service-worker.js": "/randomayah/service-worker.js",
-    "static/css/main.4b3884d2.chunk.css.map": "/randomayah/static/css/main.4b3884d2.chunk.css.map",
+    "static/css/main.6aaade59.chunk.css.map": "/randomayah/static/css/main.6aaade59.chunk.css.map",
     "static/js/2.39fbd4e2.chunk.js.LICENSE": "/randomayah/static/js/2.39fbd4e2.chunk.js.LICENSE",
+    "static/media/App.css": "/randomayah/static/media/UthmanicHafs1Ex1Ver12.a1ffd466.otf",
     "static/media/twitter.svg": "/randomayah/static/media/twitter.d45f5c63.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.1122143d.js",
     "static/js/2.39fbd4e2.chunk.js",
-    "static/css/main.4b3884d2.chunk.css",
+    "static/css/main.6aaade59.chunk.css",
     "static/js/main.ea07dd69.chunk.js"
   ]
 }
