@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import twitter from './twitter.svg'
+import upto1000 from './upto1000.json'
 
 class App extends React.Component {
   state = {
@@ -21,19 +22,31 @@ class App extends React.Component {
     this.apiCall()
   }
 
+  // apiCall = () => {
+  //   this.setState({ loading: true })
+  //   fetch(`http://api.alquran.cloud/v1/ayah/${randomAyah()}`)
+  //     .then(response => response.json())
+  //     .then(ayah => {
+  //       this.setState({
+  //         loading: false,
+  //         ayahNumber: reverseForKFGQPC(convertToInd(ayah.data.numberInSurah)),
+  //         ayah: ayah.data.text,
+  //         author: ayah.data.surah.name,
+  //         color: randomcolor()
+  //       })
+  //     })
+  // }
+
   apiCall = () => {
+    let currentAyah = randomAyah()
     this.setState({ loading: true })
-    fetch(`http://api.alquran.cloud/v1/ayah/${randomAyah()}`)
-      .then(response => response.json())
-      .then(ayah => {
-        this.setState({
-          loading: false,
-          ayahNumber: reverseForKFGQPC(convertToInd(ayah.data.numberInSurah)),
-          ayah: ayah.data.text,
-          author: ayah.data.surah.name,
-          color: randomcolor()
-        })
-      })
+    this.setState({
+      loading: false,
+      ayahNumber: reverseForKFGQPC(convertToInd(upto1000[currentAyah].data.numberInSurah)),
+      ayah: upto1000[currentAyah].data.text,
+      // author: ayah.data.surah.name,
+      color: randomcolor()
+    })
   }
 
   render() {
@@ -85,8 +98,14 @@ const Quote = props => {
         آية جديدة
       </button>
       <div id='twitterbox'>
-        <a href={`https://twitter.com/intent/tweet?hashtags=Quran&text=${props.ayah}`}>
-          <img src={twitter} style={{ backgroundColor: props.color }} alt={'tweet bird'} />
+        <a
+          href={`https://twitter.com/intent/tweet?hashtags=Quran&text=${props.ayah}`}
+        >
+          <img
+            src={twitter}
+            style={{ backgroundColor: props.color }}
+            alt={'tweet bird'}
+          />
         </a>
       </div>
     </div>
@@ -115,7 +134,7 @@ function convertToInd(num) {
 
 function randomAyah() {
   const firstAyah = 1
-  const lastAyah = 6236
+  const lastAyah = 999  //6236
   const diff = lastAyah - firstAyah + 1 // added 1 because the range doesn't include the last Ayah
   return Math.floor(Math.random() * diff + firstAyah)
 }
