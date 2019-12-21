@@ -1,7 +1,7 @@
 @font-face { font-family: KFGQPC HafsEx1 Uthmanic Script; src: url('./UthmanicHafs1Ex1Ver12.otf'); } 
 #quote-box{
   background-color : whitesmoke;
-  width: 500px;
+  width: 400px;
   border-radius: 3px;
   margin: auto;
   position: absolute;
