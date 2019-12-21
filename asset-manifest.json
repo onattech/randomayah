@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/randomayah/static/css/main.4b3884d2.chunk.css",
-    "main.js": "/randomayah/static/js/main.4d2b5970.chunk.js",
-    "main.js.map": "/randomayah/static/js/main.4d2b5970.chunk.js.map",
-    "runtime-main.js": "/randomayah/static/js/runtime-main.1122143d.js",
-    "runtime-main.js.map": "/randomayah/static/js/runtime-main.1122143d.js.map",
-    "static/js/2.d3cc21b2.chunk.js": "/randomayah/static/js/2.d3cc21b2.chunk.js",
-    "static/js/2.d3cc21b2.chunk.js.map": "/randomayah/static/js/2.d3cc21b2.chunk.js.map",
-    "index.html": "/randomayah/index.html",
-    "precache-manifest.7e8ff703b6585ee1c33c4507049e9632.js": "/randomayah/precache-manifest.7e8ff703b6585ee1c33c4507049e9632.js",
-    "service-worker.js": "/randomayah/service-worker.js",
-    "static/css/main.4b3884d2.chunk.css.map": "/randomayah/static/css/main.4b3884d2.chunk.css.map",
-    "static/js/2.d3cc21b2.chunk.js.LICENSE": "/randomayah/static/js/2.d3cc21b2.chunk.js.LICENSE",
-    "static/media/twitter.svg": "/randomayah/static/media/twitter.d45f5c63.svg"
+    "main.css": "/wallabyjs/quokka-react-sample/static/css/main.4b3884d2.chunk.css",
+    "main.js": "/wallabyjs/quokka-react-sample/static/js/main.ea07dd69.chunk.js",
+    "main.js.map": "/wallabyjs/quokka-react-sample/static/js/main.ea07dd69.chunk.js.map",
+    "runtime-main.js": "/wallabyjs/quokka-react-sample/static/js/runtime-main.7027e5fd.js",
+    "runtime-main.js.map": "/wallabyjs/quokka-react-sample/static/js/runtime-main.7027e5fd.js.map",
+    "static/js/2.39fbd4e2.chunk.js": "/wallabyjs/quokka-react-sample/static/js/2.39fbd4e2.chunk.js",
+    "static/js/2.39fbd4e2.chunk.js.map": "/wallabyjs/quokka-react-sample/static/js/2.39fbd4e2.chunk.js.map",
+    "index.html": "/wallabyjs/quokka-react-sample/index.html",
+    "precache-manifest.4ae9c28e10be5ceb245eb80ee1b8bd90.js": "/wallabyjs/quokka-react-sample/precache-manifest.4ae9c28e10be5ceb245eb80ee1b8bd90.js",
+    "service-worker.js": "/wallabyjs/quokka-react-sample/service-worker.js",
+    "static/css/main.4b3884d2.chunk.css.map": "/wallabyjs/quokka-react-sample/static/css/main.4b3884d2.chunk.css.map",
+    "static/js/2.39fbd4e2.chunk.js.LICENSE": "/wallabyjs/quokka-react-sample/static/js/2.39fbd4e2.chunk.js.LICENSE",
+    "static/media/twitter.svg": "/wallabyjs/quokka-react-sample/static/media/twitter.d45f5c63.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.1122143d.js",
-    "static/js/2.d3cc21b2.chunk.js",
+    "static/js/runtime-main.7027e5fd.js",
+    "static/js/2.39fbd4e2.chunk.js",
     "static/css/main.4b3884d2.chunk.css",
-    "static/js/main.4d2b5970.chunk.js"
+    "static/js/main.ea07dd69.chunk.js"
   ]
 }
