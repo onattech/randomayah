@@ -44,7 +44,7 @@ class App extends React.Component {
       loading: false,
       ayahNumber: reverseForKFGQPC(convertToInd(upto1000[currentAyah].data.numberInSurah)),
       ayah: upto1000[currentAyah].data.text,
-      // author: ayah.data.surah.name,
+      author: upto1000[currentAyah].data.surah.name,
       color: randomcolor()
     })
   }
