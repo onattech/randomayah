@@ -42,9 +42,9 @@ class App extends React.Component {
     this.setState({ loading: true })
     this.setState({
       loading: false,
-      ayahNumber: reverseForKFGQPC(convertToInd(ayahobject[currentAyah].data.numberInSurah)),
-      ayah: ayahobject[currentAyah].data.text,
-      author: ayahobject[currentAyah].data.surah.name,
+      ayahNumber: reverseForKFGQPC(convertToInd(ayahobject[currentAyah].numberInSurah)),
+      ayah: ayahobject[currentAyah].text,
+      author: ayahobject[currentAyah].surah.name,
       color: randomcolor()
     })
   }
