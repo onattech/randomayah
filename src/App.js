@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import twitter from './twitter.svg'
-import upto1000 from './upto1000.json'
+import ayahobject from './ayahobject.json'
 
 class App extends React.Component {
   state = {
@@ -42,9 +42,9 @@ class App extends React.Component {
     this.setState({ loading: true })
     this.setState({
       loading: false,
-      ayahNumber: reverseForKFGQPC(convertToInd(upto1000[currentAyah].data.numberInSurah)),
-      ayah: upto1000[currentAyah].data.text,
-      author: upto1000[currentAyah].data.surah.name,
+      ayahNumber: reverseForKFGQPC(convertToInd(ayahobject[currentAyah].data.numberInSurah)),
+      ayah: ayahobject[currentAyah].data.text,
+      author: ayahobject[currentAyah].data.surah.name,
       color: randomcolor()
     })
   }
@@ -135,7 +135,7 @@ function convertToInd(num) {
 
 function randomAyah() {
   const firstAyah = 1
-  const lastAyah = 999  //6236
+  const lastAyah = 6236
   const diff = lastAyah - firstAyah + 1 // added 1 because the range doesn't include the last Ayah
   return Math.floor(Math.random() * diff + firstAyah)
 }
