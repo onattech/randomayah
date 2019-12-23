@@ -6,12 +6,10 @@ import ayahobject from './ayahobject.json'
 class App extends React.Component {
   state = {
     ayah: '',
-    author: '',
+    surah: '',
     color: '',
     loading: false,
-    ayahNumber: 0,
-    ayahName: '',
-    surah: ''
+    ayahNumber: 0
   }
 
   handleClick = () => {
@@ -22,41 +20,26 @@ class App extends React.Component {
     this.apiCall()
   }
 
-  // apiCall = () => {
-  //   this.setState({ loading: true })
-  //   fetch(`http://api.alquran.cloud/v1/ayah/${randomAyah()}`)
-  //     .then(response => response.json())
-  //     .then(ayah => {
-  //       this.setState({
-  //         loading: false,
-  //         ayahNumber: reverseForKFGQPC(convertToInd(ayah.data.numberInSurah)),
-  //         ayah: ayah.data.text,
-  //         author: ayah.data.surah.name,
-  //         color: randomcolor()
-  //       })
-  //     })
-  // }
-
   apiCall = () => {
-    let currentAyah = randomAyah()
+    let currentAyah = randomNumber()
     this.setState({ loading: true })
     this.setState({
       loading: false,
       ayahNumber: reverseForKFGQPC(convertToInd(ayahobject[currentAyah].numberInSurah)),
       ayah: ayahobject[currentAyah].text,
-      author: ayahobject[currentAyah].surah.name,
+      surah: ayahobject[currentAyah].surah.name,
       color: randomcolor()
     })
   }
 
   render() {
     document.body.style.backgroundColor = this.state.color
-    let { ayah, author, color, ayahNumber, loading } = this.state
+    let { ayah, surah, color, ayahNumber, loading } = this.state
     return (
       <div>
         <Quote
           ayah={ayah}
-          author={author}
+          surah={surah}
           color={color}
           handleClick={this.handleClick}
           ayahNumber={ayahNumber}
@@ -77,7 +60,6 @@ const Quote = props => {
 
   return (
     <div id='quote-box'>
-      <h1 id='title'>مولد آيات عشوائي</h1>
       {props.loading && <p id='loading'>...جار التحميل</p>}
       <p
         style={{ color: props.color, display: props.loading && 'none' }}
@@ -87,9 +69,9 @@ const Quote = props => {
       </p>
       <p
         style={{ color: props.color, display: props.loading && 'none' }}
-        id='author'
+        id='surah'
       >
-        {props.author}
+        {props.surah}
       </p>
       <button id='button'
         style={{ backgroundColor: props.color }}
@@ -133,7 +115,7 @@ function convertToInd(num) {
   return x
 }
 
-function randomAyah() {
+function randomNumber() {
   const firstAyah = 1
   const lastAyah = 6236
   const diff = lastAyah - firstAyah + 1 // added 1 because the range doesn't include the last Ayah
