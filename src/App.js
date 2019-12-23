@@ -6,6 +6,7 @@ import ayahobject from './ayahobject.json'
 class App extends React.Component {
   state = {
     ayah: '',
+    uthmani: '',
     surah: '',
     color: '',
     loading: false,
@@ -25,8 +26,9 @@ class App extends React.Component {
     this.setState({ loading: true })
     this.setState({
       loading: false,
-      ayahNumber: (ayahobject[currentAyah].numberInSurahIndReverse),
+      ayahNumber: ayahobject[currentAyah].numberInSurahIndReverse,
       ayah: ayahobject[currentAyah].text,
+      uthmani: ayahobject[currentAyah].uthmaniText,
       surah: ayahobject[currentAyah].surah.name,
       color: randomcolor()
     })
@@ -34,11 +36,11 @@ class App extends React.Component {
 
   render() {
     document.body.style.backgroundColor = this.state.color
-    let { ayah, surah, color, ayahNumber, loading } = this.state
+    let { ayah, surah, color, ayahNumber, loading, uthmani } = this.state
     return (
       <div>
         <Quote
-          ayah={ayah}
+          ayah={uthmani}
           surah={surah}
           color={color}
           handleClick={this.handleClick}
@@ -73,7 +75,8 @@ const Quote = props => {
       >
         {props.surah}
       </p>
-      <button id='button'
+      <button
+        id='button'
         style={{ backgroundColor: props.color }}
         onClick={props.handleClick}
         id='new-quote'
@@ -94,7 +97,6 @@ const Quote = props => {
     </div>
   )
 }
-
 
 function randomNumber() {
   const firstAyah = 1
@@ -136,7 +138,7 @@ function randomcolor() {
 export default App
 
 // function convertToInd(num) {
-  //   const dict = {
+//   const dict = {
 //     0: '٠',
 //     1: '١',
 //     2: '٢',
