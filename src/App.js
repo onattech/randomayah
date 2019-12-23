@@ -25,7 +25,7 @@ class App extends React.Component {
     this.setState({ loading: true })
     this.setState({
       loading: false,
-      ayahNumber: reverseForKFGQPC(convertToInd(ayahobject[currentAyah].numberInSurah)),
+      ayahNumber: (ayahobject[currentAyah].numberInSurahIndReverse),
       ayah: ayahobject[currentAyah].text,
       surah: ayahobject[currentAyah].surah.name,
       color: randomcolor()
@@ -95,51 +95,12 @@ const Quote = props => {
   )
 }
 
-function convertToInd(num) {
-  const dict = {
-    0: '٠',
-    1: '١',
-    2: '٢',
-    3: '٣',
-    4: '٤',
-    5: '٥',
-    6: '٦',
-    7: '٧',
-    8: '٨',
-    9: '٩'
-  }
-  let x = String(num)
-    .split('')
-    .map(a => dict[a])
-    .join('')
-  return x
-}
 
 function randomNumber() {
   const firstAyah = 1
   const lastAyah = 6236
   const diff = lastAyah - firstAyah + 1 // added 1 because the range doesn't include the last Ayah
   return Math.floor(Math.random() * diff + firstAyah)
-}
-
-function reverseForKFGQPC(num) {
-  console.log(num, 'before change')
-  if (num.length < 3) {
-    return String(num)
-      .split('')
-      .reverse()
-      .join('')
-  } else {
-    let array = String(num).split('')
-    console.log(array)
-    return String(num)
-      .split('')
-      .reverse()
-      .join('')
-
-    // let newnum = String(num).split('')[0]+ String(num).split('')[1]
-    // return newnum.join('')
-  }
 }
 
 function randomcolor() {
@@ -173,3 +134,38 @@ function randomcolor() {
 }
 
 export default App
+
+// function convertToInd(num) {
+  //   const dict = {
+//     0: '٠',
+//     1: '١',
+//     2: '٢',
+//     3: '٣',
+//     4: '٤',
+//     5: '٥',
+//     6: '٦',
+//     7: '٧',
+//     8: '٨',
+//     9: '٩'
+//   }
+//   let x = String(num)
+//     .split('')
+//     .map(a => dict[a])
+//     .join('')
+//   return x
+// }
+
+// function reverseForKFGQPC(num) {
+//   if (num.length < 3) {
+//     return String(num)
+//     .split('')
+//     .reverse()
+//     .join('')
+//   } else {
+//     let array = String(num).split('')
+//     return String(num)
+//     .split('')
+//     .reverse()
+//     .join('')
+//   }
+// }
