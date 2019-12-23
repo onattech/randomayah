@@ -38,7 +38,7 @@
   display:none;
 }
 
-#new-quote {
+.new-quote {
   border: 0px;
   border-radius: 3px;
   color:white;
