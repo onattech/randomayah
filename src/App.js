@@ -26,7 +26,7 @@ class App extends React.Component {
     this.setState({ loading: true })
     this.setState({
       loading: false,
-      ayahNumber: ayahobject[currentAyah].numberInSurahIndReverse,
+      ayahNumber: ayahobject[currentAyah].numberInSurahNativeReverse,
       ayah: ayahobject[currentAyah].text,
       uthmani: ayahobject[currentAyah].uthmaniText,
       surah: ayahobject[currentAyah].surah.name,
