@@ -26,7 +26,7 @@ class App extends React.Component {
     this.setState({ loading: true })
     this.setState({
       loading: false,
-      ayahNumber: ayahobject[currentAyah].numberInSurahIndReverse,
+      ayahNumber: ayahobject[currentAyah].numberInSurahNativeReverse,
       ayah: ayahobject[currentAyah].text,
       uthmani: ayahobject[currentAyah].uthmaniText,
       surah: ayahobject[currentAyah].surah.name,
@@ -36,7 +36,7 @@ class App extends React.Component {
 
   render() {
     document.body.style.backgroundColor = this.state.color
-    let { ayah, surah, color, ayahNumber, loading, uthmani } = this.state
+    let { surah, color, ayahNumber, loading, uthmani } = this.state
     return (
       <div>
         <Quote
@@ -79,7 +79,7 @@ const Quote = props => {
         id='button'
         style={{ backgroundColor: props.color }}
         onClick={props.handleClick}
-        id='new-quote'
+        className='new-quote'
       >
         آية جديدة
       </button>
