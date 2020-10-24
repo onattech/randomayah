@@ -1,52 +1,42 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css'
 import ayahobject from './ayahobject.json'
 
-class App extends React.Component {
-  state = {
-    ayah: '',
-    surah: '',
-    color: '',
-    loading: false,
-    ayahNumber: 0,
-  }
+function App() {
+  const [ayah, setAyah] = useState('')
+  const [surah, setSurah] = useState('')
+  const [color, setColor] = useState('')
+  const [loading, setLoading] = useState(false)
+  const [ayahNumber, setAyahNumber] = useState(0)
 
-  handleClick = () => {
-    this.apiCall()
-  }
+  useEffect(() => {apiCall()}, [])
 
-  componentDidMount = () => {
-    this.apiCall()
-  }
+  const handleClick = () => { apiCall() }
 
-  apiCall = () => {
+  const apiCall = async () => {
     let currentAyah = randomNumber()
-    this.setState({ loading: true })
-    this.setState({
-      loading: false,
-      ayahNumber: ayahobject[currentAyah].numberInSurahNativeReverse,
-      ayah: ayahobject[currentAyah].uthmaniText,
-      surah: ayahobject[currentAyah].surah.name,
-      color: randomcolor(),
-    })
+    setLoading(true)
+    await new Promise(r => setTimeout(r,300))
+    setAyah(ayahobject[currentAyah].uthmaniText)
+    setSurah(ayahobject[currentAyah].surah.name)
+    setColor(randomcolor())
+    setAyahNumber(ayahobject[currentAyah].numberInSurahNativeReverse)
+    setLoading(false)
   }
 
-  render() {
-    document.body.style.backgroundColor = this.state.color
-    let { surah, color, ayahNumber, loading, ayah } = this.state
-    return (
-      <div>
-        <Quote
-          ayah={ayah}
-          surah={surah}
-          color={color}
-          handleClick={this.handleClick}
-          ayahNumber={ayahNumber}
-          loading={loading}
-        />
-      </div>
-    )
-  }
+  document.body.style.backgroundColor = color
+  return (
+    <div>
+      <Quote
+        ayah={ayah}
+        surah={surah}
+        color={color}
+        handleClick={handleClick}
+        ayahNumber={ayahNumber}
+        loading={loading}
+      />
+    </div>
+  )
 }
 
 const Quote = (props) => {
